@@ -1,0 +1,5 @@
+table td{border:1px orange solid; color:pink;}
+td{text-align: center;}
+table{float:left;}
+table:hover td{color:PaleVioletRed ;}
+body{text-align:center; color: black;}
