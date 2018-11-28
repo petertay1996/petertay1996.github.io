@@ -1,0 +1,50 @@
+.header {
+	font-size: 48px; 
+	color:white;
+	font-weight:bold; 
+	font-style:italic;
+	text-align:center;
+}
+
+a:link{
+	color: white;
+	text-decoration: none;
+}
+
+.content {
+	color: white;
+	margin: 6px 30% 6px 0px;
+	padding: 6px;
+	background-color: ccffff; 
+}
+
+.sidebar {
+	position: absolute;
+	top: 65px;
+	right: 10px;
+	width: 20%;
+	font-family: "標楷體";
+	font-size: 14px;
+	color: olive;
+}
+
+.footer {
+	font-size: 28px;
+	color: white;
+	background-color:ccffff;
+	padding: 6px;
+	text-align: left;
+	margin: 6px 30% 6px 0px;
+}
+
+img{
+	float: center;
+	border-radius: 50%;
+}
+
+body{
+	background-image:url('../slides/back.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 2000px 500px;
+}
