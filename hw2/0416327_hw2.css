@@ -1,0 +1,10 @@
+table td{border:1px orange solid; color:pink;}
+td{text-align: center;}
+table{float:left;}
+table:hover td{color:PaleVioletRed ;}
+body{text-align:center; color: white;}
+div {padding: 70px;
+	margin-left: 300px;
+	margin-top: -70px;
+	margin-right: 0px;
+	margin-bottom: 70px;}

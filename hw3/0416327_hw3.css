@@ -1,0 +1,20 @@
+#container {
+  width: 1250px;
+  height: 450px;
+  position: relative;
+  background: white;
+  background-image: url("background.png");
+  background-size:contain;
+  background-repeat:no-repeat;
+}
+
+#animate div{
+  width: 25px;
+  height: 25px;
+  border-radius: 50px;
+  position: absolute;
+  background-color: #AFEEEE;
+  background-position: center;
+  background-size:contain;
+  background-repeat:no-repeat;
+}

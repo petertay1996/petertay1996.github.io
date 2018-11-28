@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv=content-type content="text/html; charset=utf-8">
+<title>!Hello World!</title>
+<style type="text/css">
+@import url("0416327_hw2.css");
+</style>
+</head>
+<body>
+二位數魔術 ：)<br>
+Q: 心裡默想一個 1 到 63 間的任一個數，不要讓我知道。。。<br>
+但是告訴我有沒有在一下哪幾個卡片中？<br>我可以很快找出來喔！<br><br><br>
+<script type="text/javascript" src="0416327_hw2.js"></script><br>
+<button onclick="Calculate()"> Result </button>
+<script>
+function Calculate()
+{
+	var total =0;
+	
+	if(document.getElementById("myCard1").checked) total += 1;
+	if(document.getElementById("myCard2").checked) total += (1<<1);
+	if(document.getElementById("myCard3").checked) total += (1<<2);
+	if(document.getElementById("myCard4").checked) total += (1<<3);
+	if(document.getElementById("myCard5").checked) total += (1<<4);
+	if(document.getElementById("myCard6").checked) total += (1<<5);
+	
+	document.getElementById("demo").innerHTML = total;
+	total=0;
+}
+
+</script>
+
+<p id ="demo"></p>
+</body>
+</html>
