@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+@import url("Slide.css");
+</style>
+</head>
+<body> <!-- style="background-color:#00001a"-->
+
+<div class="slideshow-container"  >
+<div class="w3-content w3-section">
+
+  <img class="mySlides w3-animate-fading" src="Picture/Slide/1.jpg" style="width:100%;height:500px">
+  <img class="mySlides w3-animate-fading" src="Picture/Slide/2.jpg" style="width:100%;height:500px">
+  <img class="mySlides w3-animate-fading" src="Picture/Slide/3.jpg" style="width:100%;height:500px">
+  <img class="mySlides w3-animate-fading" src="Picture/Slide/4.jpg" style="width:100%;height:500px">
+  <img class="mySlides w3-animate-fading" src="Picture/Slide/5.jpg" style="width:100%;height:500px">
+  <img class="mySlides w3-animate-fading" src="Picture/Slide/6.jpg" style="width:100%;height:500px">
+  <img class="mySlides w3-animate-fading" src="Picture/Slide/7.jpg" style="width:100%;height:500px">
+  <img class="mySlides w3-animate-fading" src="Picture/Slide/8.jpg" style="width:100%;height:500px">
+  <img class="mySlides w3-animate-fading" src="Picture/Slide/9.jpg" style="width:100%;height:500px">
+  <img class="mySlides w3-animate-fading" src="Picture/Slide/10.jpg" style="width:100%;height:500px">
+	
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+  <span class="dot" onclick="currentSlide(5)"></span> 
+  <span class="dot" onclick="currentSlide(6)"></span> 
+  <span class="dot" onclick="currentSlide(7)"></span> 
+  <span class="dot" onclick="currentSlide(8)"></span> 
+  <span class="dot" onclick="currentSlide(9)"></span> 
+  <span class="dot" onclick="currentSlide(10)"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 9000);    
+}
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+
+
+</script>
+
+</body>
+</html> 
